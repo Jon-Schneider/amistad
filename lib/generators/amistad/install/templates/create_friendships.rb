@@ -5,6 +5,7 @@ class CreateFriendships < ActiveRecord::Migration
       t.integer :friend_id
       t.integer :blocker_id
       t.boolean :pending, :default => true
+      t.integer :friendship_type
     end
 
     add_index :friendships, [:friendable_id, :friend_id], :unique => true
