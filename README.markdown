@@ -1,3 +1,6 @@
+## Fork Notes ##
+This is a fork of amistad with an added integer variable added to the friendships table and model, friendship_type, that can be used to hold metadata about a relationship. You will need to manually install this gem - it's not published on rubygems. Fortunately, it's easy. Just add the line **gem "amistad", git: 'git://github.com/Jon-Schneider/amistad'** to your Rubygems file and it will automatically pull the gem from this repo.
+
 # amistad #
 
 Amistad adds friendships management into a rails 3.0 application. it supports ActiveRecord 3.0.x, Mongoid 3.0.x and MongoMapper 0.12.0.
