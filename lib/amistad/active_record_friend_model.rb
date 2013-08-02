@@ -63,6 +63,11 @@ module Amistad
       Amistad.friendship_class.new{ |f| f.friendable = self ; f.friend = user }.save
     end
 
+    def invite(user, connection_type)
+      return false if user == self || find_any_friendship_with(user)
+      Amistad.friendship_class.new{ |f| f.friendable = self ; f.friend = user, f.friendship_type = connection_type }.save
+    end
+
     # approve a friendship invitation. If the operation succeeds, the method returns true, else false
     def approve(user)
       friendship = find_any_friendship_with(user)
